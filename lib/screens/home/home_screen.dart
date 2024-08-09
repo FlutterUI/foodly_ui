@@ -4,7 +4,7 @@ import '../../components/cards/big/big_card_image_slide.dart';
 import '../../components/cards/big/restaurant_info_big_card.dart';
 import '../../components/section_title.dart';
 import '../../constants.dart';
-import '../../demoData.dart';
+import '../../demo_data.dart';
 import '../../screens/filter/filter_screen.dart';
 import '../details/details_screen.dart';
 import '../featured/featurred_screen.dart';

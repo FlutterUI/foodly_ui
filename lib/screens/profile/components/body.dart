@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:foodly_ui/constants.dart';
+import '../../../constants.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -68,12 +68,12 @@ class Body extends StatelessWidget {
 
 class ProfileMenuCard extends StatelessWidget {
   const ProfileMenuCard({
-    Key? key,
+    super.key,
     this.title,
     this.subTitle,
     this.svgSrc,
     this.press,
-  }) : super(key: key);
+  });
 
   final String? title, subTitle, svgSrc;
   final VoidCallback? press;
@@ -93,7 +93,10 @@ class ProfileMenuCard extends StatelessWidget {
                 svgSrc!,
                 height: 24,
                 width: 24,
-                color: titleColor.withOpacity(0.64),
+                colorFilter: ColorFilter.mode(
+                  titleColor.withOpacity(0.64),
+                  BlendMode.srcIn,
+                ),
               ),
               const SizedBox(width: 8),
               Expanded(

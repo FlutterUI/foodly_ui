@@ -1,4 +1,4 @@
-// It contains all our demo data that we used
+
 
 List<String> demoBigImages = [
   "assets/images/big_1.png",

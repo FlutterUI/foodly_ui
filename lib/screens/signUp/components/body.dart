@@ -73,7 +73,10 @@ class Body extends StatelessWidget {
                 color: const Color(0xFF395998),
                 icon: SvgPicture.asset(
                   'assets/icons/facebook.svg',
-                  color: const Color(0xFF395998),
+                  colorFilter: const ColorFilter.mode(
+                    Color(0xFF395998),
+                    BlendMode.srcIn,
+                  ),
                 ),
               ),
               const SizedBox(height: 16),

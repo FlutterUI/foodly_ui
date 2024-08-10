@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:foodly_ui/entry_point.dart';
+import '../../entry_point.dart';
 
 import '../../components/buttons/secondery_button.dart';
 import '../../components/welcome_text.dart';
@@ -46,7 +46,10 @@ class FindRestaurantsScreen extends StatelessWidget {
                     SvgPicture.asset(
                       "assets/icons/location.svg",
                       height: 24,
-                      color: primaryColor,
+                      colorFilter: const ColorFilter.mode(
+                        primaryColor,
+                        BlendMode.srcIn,
+                      ),
                     ),
                     const SizedBox(width: 8),
                     Text(

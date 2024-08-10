@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodly_ui/screens/phoneLogin/phone_login_screen.dart';
+import '../../phoneLogin/phone_login_screen.dart';
 
 import '../../../constants.dart';
 
@@ -7,7 +7,7 @@ class SignUpForm extends StatefulWidget {
   const SignUpForm({super.key});
 
   @override
-  _SignUpFormState createState() => _SignUpFormState();
+  State<SignUpForm> createState() => _SignUpFormState();
 }
 
 class _SignUpFormState extends State<SignUpForm> {
@@ -23,7 +23,7 @@ class _SignUpFormState extends State<SignUpForm> {
         children: [
           // Full Name Field
           TextFormField(
-            validator: requiredValidator,
+            validator: requiredValidator.call,
             onSaved: (value) {},
             textInputAction: TextInputAction.next,
             decoration: const InputDecoration(hintText: "Full Name"),
@@ -32,7 +32,7 @@ class _SignUpFormState extends State<SignUpForm> {
 
           // Email Field
           TextFormField(
-            validator: emailValidator,
+            validator: emailValidator.call,
             onSaved: (value) {},
             textInputAction: TextInputAction.next,
             keyboardType: TextInputType.emailAddress,
@@ -43,7 +43,7 @@ class _SignUpFormState extends State<SignUpForm> {
           // Password Field
           TextFormField(
             obscureText: _obscureText,
-            validator: passwordValidator,
+            validator: passwordValidator.call,
             textInputAction: TextInputAction.next,
             onChanged: (value) {},
             onSaved: (value) {},

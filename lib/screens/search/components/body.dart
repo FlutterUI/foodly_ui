@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:foodly_ui/constants.dart';
+import '../../../constants.dart';
 
 import '../../../components/cards/big/restaurant_info_big_card.dart';
 import '../../../components/scalton/big_card_scalton.dart';
-import '../../../demoData.dart';
+import '../../../demo_data.dart';
 
 class Body extends StatefulWidget {
   const Body({super.key});
 
   @override
-  _BodyState createState() => _BodyState();
+  State<Body> createState() => _BodyState();
 }
 
 class _BodyState extends State<Body> {
@@ -100,7 +100,7 @@ class _BodyState extends State<Body> {
             showResult();
           } else {}
         },
-        validator: requiredValidator,
+        validator: requiredValidator.call,
         style: Theme.of(context).textTheme.labelLarge,
         textInputAction: TextInputAction.search,
         decoration: InputDecoration(
@@ -110,7 +110,10 @@ class _BodyState extends State<Body> {
             padding: const EdgeInsets.all(8.0),
             child: SvgPicture.asset(
               'assets/icons/search.svg',
-              color: bodyTextColor,
+              colorFilter: const ColorFilter.mode(
+                bodyTextColor,
+                BlendMode.srcIn,
+              ),
             ),
           ),
         ),

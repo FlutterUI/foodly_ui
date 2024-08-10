@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:foodly_ui/screens/findRestaurants/find_restaurants_screen.dart';
+import '../../findRestaurants/find_restaurants_screen.dart';
 
-import '../../../components/buttons/primary_button.dart';
 import '../../../constants.dart';
 import '../forgot_password_screen.dart';
 
@@ -24,7 +23,7 @@ class _SignInFormState extends State<SignInForm> {
       child: Column(
         children: [
           TextFormField(
-            validator: emailValidator,
+            validator: emailValidator.call,
             onSaved: (value) {},
             textInputAction: TextInputAction.next,
             keyboardType: TextInputType.emailAddress,
@@ -35,7 +34,7 @@ class _SignInFormState extends State<SignInForm> {
           // Password Field
           TextFormField(
             obscureText: _obscureText,
-            validator: passwordValidator,
+            validator: passwordValidator.call,
             onSaved: (value) {},
             decoration: InputDecoration(
               hintText: "Password",
@@ -87,7 +86,7 @@ class _SignInFormState extends State<SignInForm> {
                 );
               }
             },
-            child: Text("Sign in"),
+            child: const Text("Sign in"),
           ),
         ],
       ),

@@ -4,15 +4,14 @@ import '../../../components/scalton/scalton_rounded_container.dart';
 import '../../../constants.dart';
 
 class PromotionBanner extends StatefulWidget {
-  const PromotionBanner({
-    Key? key,
-  }) : super(key: key);
+  const PromotionBanner({super.key});
 
   @override
-  _PromotionBannerState createState() => _PromotionBannerState();
+  State<PromotionBanner> createState() => _PromotionBannerState();
 }
 
 class _PromotionBannerState extends State<PromotionBanner> {
+  
   bool isLoading = true;
   @override
   void initState() {

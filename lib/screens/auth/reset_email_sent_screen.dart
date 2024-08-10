@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:foodly_ui/constants.dart';
+import '../../constants.dart';
 
 import '../../components/welcome_text.dart';
 

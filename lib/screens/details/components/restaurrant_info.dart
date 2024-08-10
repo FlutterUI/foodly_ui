@@ -6,8 +6,8 @@ import '../../../constants.dart';
 
 class RestaurantInfo extends StatelessWidget {
   const RestaurantInfo({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -78,7 +78,10 @@ class DeliveryInfo extends StatelessWidget {
           iconSrc,
           height: 20,
           width: 20,
-          color: primaryColor,
+          colorFilter: const ColorFilter.mode(
+            primaryColor,
+            BlendMode.srcIn,
+          ),
         ),
         const SizedBox(width: 8),
         Text.rich(

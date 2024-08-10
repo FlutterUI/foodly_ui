@@ -3,16 +3,14 @@ import 'package:flutter/material.dart';
 import '../../../components/cards/medium/restaurant_info_medium_card.dart';
 import '../../../components/scalton/medium_card_scalton.dart';
 import '../../../constants.dart';
-import '../../../demoData.dart';
+import '../../../demo_data.dart';
 import '../../details/details_screen.dart';
 
 class MediumCardList extends StatefulWidget {
-  const MediumCardList({
-    Key? key,
-  }) : super(key: key);
+  const MediumCardList({super.key});
 
   @override
-  _MediumCardListState createState() => _MediumCardListState();
+  State<MediumCardList> createState() => _MediumCardListState();
 }
 
 class _MediumCardListState extends State<MediumCardList> {

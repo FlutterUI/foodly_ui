@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../../components/cards/big/restaurant_info_big_card.dart';
 import '../../components/scalton/big_card_scalton.dart';
 import '../../constants.dart';
-import '../../demoData.dart';
+import '../../demo_data.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -114,7 +114,7 @@ class _SearchFormState extends State<SearchForm> {
             // Once user pree on submit
           } else {}
         },
-        validator: requiredValidator,
+        validator: requiredValidator.call,
         style: Theme.of(context).textTheme.labelLarge,
         textInputAction: TextInputAction.search,
         decoration: InputDecoration(
@@ -124,7 +124,10 @@ class _SearchFormState extends State<SearchForm> {
             padding: const EdgeInsets.all(8.0),
             child: SvgPicture.asset(
               'assets/icons/search.svg',
-              color: bodyTextColor,
+              colorFilter: const ColorFilter.mode(
+                bodyTextColor,
+                BlendMode.srcIn,
+              ),
             ),
           ),
         ),

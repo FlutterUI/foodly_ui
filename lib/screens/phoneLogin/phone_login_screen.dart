@@ -15,7 +15,7 @@ class PghoneLoginScreen extends StatefulWidget {
 class _PghoneLoginScreenState extends State<PghoneLoginScreen> {
   final _formKey = GlobalKey<FormState>();
 
-  String? _phoneNumber;
+  String? phoneNumber;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,9 +37,9 @@ class _PghoneLoginScreenState extends State<PghoneLoginScreen> {
               Form(
                 key: _formKey,
                 child: TextFormField(
-                  validator: phoneNumberValidator,
+                  validator: phoneNumberValidator.call,
                   autofocus: true,
-                  onSaved: (value) => _phoneNumber = value,
+                  onSaved: (value) => phoneNumber = value,
                   style: Theme.of(context)
                       .textTheme
                       .bodyMedium!

@@ -16,7 +16,7 @@ class Body extends StatelessWidget {
     return SafeArea(
       child: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -90,7 +90,7 @@ class Body extends StatelessWidget {
                   'assets/icons/google.svg',
                 ),
               ),
-              const SizedBox(height: defaultPadding),
+              const SizedBox(height: 16),
             ],
           ),
         ),

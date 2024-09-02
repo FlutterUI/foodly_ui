@@ -16,17 +16,17 @@ class PriceRange extends StatelessWidget {
           press: () {},
           isMainSection: false,
         ),
-        const SizedBox(height: defaultPadding),
+        const SizedBox(height: 16),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              const SizedBox(width: defaultPadding),
+              const SizedBox(width: 16),
               ...List.generate(
                 // For demo i'm using length 5
                 5, // Price limit
                 (index) => Padding(
-                  padding: const EdgeInsets.only(right: defaultPadding),
+                  padding: const EdgeInsets.only(right: 16),
                   child: RoundedButton(
                     index: index,
                     isActive: index == 2, // for demo just select 3rd item
@@ -62,12 +62,13 @@ class RoundedButton extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           padding: EdgeInsets.zero,
-          backgroundColor: isActive ? primaryColor : inputColor,
+          backgroundColor: isActive ? primaryColor : Color(0xFFFBFBFB),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(100),
             side: BorderSide(
-                color:
-                    isActive ? primaryColor : bodyTextColor.withOpacity(0.1)),
+                color: isActive
+                    ? primaryColor
+                    : Color(0xFF868686).withOpacity(0.1)),
           ),
         ),
         onPressed: press,
@@ -75,7 +76,7 @@ class RoundedButton extends StatelessWidget {
           "\$" * (index + 1),
           style: TextStyle(
             fontWeight: FontWeight.normal,
-            color: isActive ? Colors.white : titleColor,
+            color: isActive ? Colors.white : Color(0xFF010F07),
             fontSize: 14,
           ),
         ),

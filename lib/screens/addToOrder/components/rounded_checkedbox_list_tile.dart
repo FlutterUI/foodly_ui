@@ -30,7 +30,7 @@ class RoundedCheckboxListTile extends StatelessWidget {
                 Text(
                   text,
                   style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                      color: titleColor.withOpacity(0.84), height: 1),
+                      color: Color(0xFF010F07).withOpacity(0.84), height: 1),
                 )
               ],
             ),
@@ -53,7 +53,7 @@ class CircleCheckBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedContainer(
-      duration: kDefaultDuration,
+      duration: Duration(milliseconds: 250),
       height: 24,
       width: 24,
       padding: EdgeInsets.all(isActive ? 3 : 12),

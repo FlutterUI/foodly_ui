@@ -14,7 +14,6 @@ class Body extends StatefulWidget {
 }
 
 class _BodyState extends State<Body> {
-  
   bool isLoading = true;
   int demoDataLength = 4;
 
@@ -32,12 +31,12 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: ListView.builder(
           // while we dont have our data bydefault we show 3 scalton
           itemCount: isLoading ? 3 : demoDataLength,
           itemBuilder: (context, index) => Padding(
-            padding: const EdgeInsets.only(bottom: defaultPadding),
+            padding: const EdgeInsets.only(bottom: 16),
             child: isLoading
                 ? const BigCardScalton()
                 : RestaurantInfoBigCard(

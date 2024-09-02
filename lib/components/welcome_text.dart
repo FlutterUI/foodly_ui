@@ -10,7 +10,7 @@ class WelcomeText extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: defaultPadding),
+        const SizedBox(height: 16),
         Text(
           title,
           style: Theme.of(context)
@@ -18,9 +18,9 @@ class WelcomeText extends StatelessWidget {
               .titleLarge!
               .copyWith(fontWeight: FontWeight.w600),
         ),
-        const SizedBox(height: defaultPadding / 2),
+        const SizedBox(height: 16 / 2),
         Text(text, style: Theme.of(context).textTheme.bodyMedium),
-        const SizedBox(height: defaultPadding),
+        const SizedBox(height: 16),
       ],
     );
   }

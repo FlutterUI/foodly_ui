@@ -18,7 +18,7 @@ class SectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -40,7 +40,7 @@ class SectionTitle extends StatelessWidget {
                   : TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
-                      color: titleColor.withOpacity(0.64),
+                      color: Color(0xFF010F07).withOpacity(0.64),
                     ),
             ),
           ),

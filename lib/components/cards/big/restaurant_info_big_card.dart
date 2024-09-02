@@ -35,15 +35,15 @@ class RestaurantInfoBigCard extends StatelessWidget {
         children: [
           // pass list of images here
           BigCardImageSlide(images: images),
-          const SizedBox(height: defaultPadding / 2),
+          const SizedBox(height: 16 / 2),
           Text(name, style: Theme.of(context).textTheme.titleLarge),
-          const SizedBox(height: defaultPadding / 4),
+          const SizedBox(height: 16 / 4),
           PriceRangeAndFoodtype(foodType: foodType),
-          const SizedBox(height: defaultPadding / 4),
+          const SizedBox(height: 16 / 4),
           Row(
             children: [
               RatingWithCounter(rating: rating, numOfRating: numOfRating),
-              const SizedBox(width: defaultPadding / 2),
+              const SizedBox(width: 16 / 2),
               SvgPicture.asset(
                 "assets/icons/clock.svg",
                 height: 20,
@@ -63,7 +63,7 @@ class RestaurantInfoBigCard extends StatelessWidget {
                 style: Theme.of(context).textTheme.labelSmall,
               ),
               const Padding(
-                padding: EdgeInsets.symmetric(horizontal: defaultPadding / 2),
+                padding: EdgeInsets.symmetric(horizontal: 16 / 2),
                 child: SmallDot(),
               ),
               SvgPicture.asset(

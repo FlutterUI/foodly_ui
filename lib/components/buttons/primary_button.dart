@@ -10,11 +10,10 @@ class PrimaryButton extends StatelessWidget {
   final GestureTapCallback press;
 
   const PrimaryButton({super.key, required this.text, required this.press});
-  
+
   @override
   Widget build(BuildContext context) {
-    EdgeInsets verticalPadding =
-        const EdgeInsets.symmetric(vertical: defaultPadding);
+    EdgeInsets verticalPadding = const EdgeInsets.symmetric(vertical: 16);
     return SizedBox(
       width: double.infinity,
       child: Platform.isIOS

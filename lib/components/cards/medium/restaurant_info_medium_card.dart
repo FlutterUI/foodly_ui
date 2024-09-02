@@ -36,20 +36,20 @@ class RestaurantInfoMediumCard extends StatelessWidget {
                 child: Image.asset(image, fit: BoxFit.cover),
               ),
             ),
-            const SizedBox(height: defaultPadding / 2),
+            const SizedBox(height: 16 / 2),
             Text(
               name,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: Theme.of(context).textTheme.titleMedium,
             ),
-            const SizedBox(height: defaultPadding / 4),
+            const SizedBox(height: 16 / 4),
             Text(
               location,
               maxLines: 1,
               style: Theme.of(context).textTheme.bodyMedium,
             ),
-            const SizedBox(height: defaultPadding / 2),
+            const SizedBox(height: 16 / 2),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -60,7 +60,7 @@ class RestaurantInfoMediumCard extends StatelessWidget {
                   style: Theme.of(context)
                       .textTheme
                       .labelLarge!
-                      .copyWith(color: titleColor.withOpacity(0.74)),
+                      .copyWith(color: Color(0xFF010F07).withOpacity(0.74)),
                 ),
                 const SmallDot(),
                 Text(
@@ -68,7 +68,7 @@ class RestaurantInfoMediumCard extends StatelessWidget {
                   style: Theme.of(context)
                       .textTheme
                       .labelMedium!
-                      .copyWith(color: titleColor.withOpacity(0.74)),
+                      .copyWith(color: Color(0xFF010F07).withOpacity(0.74)),
                 )
               ],
             )

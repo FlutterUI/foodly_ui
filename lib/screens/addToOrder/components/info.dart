@@ -20,9 +20,9 @@ class Info extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        const SizedBox(height: defaultPadding),
+        const SizedBox(height: 16),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

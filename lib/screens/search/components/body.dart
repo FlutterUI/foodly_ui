@@ -45,23 +45,23 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 16),
             Text('Search', style: Theme.of(context).textTheme.headlineMedium),
-            const SizedBox(height: defaultPadding),
+            const SizedBox(height: 16),
             buildSearchForm(),
-            const SizedBox(height: defaultPadding),
+            const SizedBox(height: 16),
             Text(_showSearchResult ? "Search Results" : "Top Restaurants",
                 style: Theme.of(context).textTheme.titleLarge),
-            const SizedBox(height: defaultPadding),
+            const SizedBox(height: 16),
             Expanded(
               child: ListView.builder(
                 itemCount: _isLoading ? 2 : 5, //5 is demo length of your data
                 itemBuilder: (context, index) => Padding(
-                  padding: const EdgeInsets.only(bottom: defaultPadding),
+                  padding: const EdgeInsets.only(bottom: 16),
                   child: _isLoading
                       ? const BigCardScalton()
                       : RestaurantInfoBigCard(
@@ -111,7 +111,7 @@ class _BodyState extends State<Body> {
             child: SvgPicture.asset(
               'assets/icons/search.svg',
               colorFilter: const ColorFilter.mode(
-                bodyTextColor,
+                Color(0xFF868686),
                 BlendMode.srcIn,
               ),
             ),

@@ -12,7 +12,7 @@ class RestaurantInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -21,13 +21,13 @@ class RestaurantInfo extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineMedium,
             maxLines: 1,
           ),
-          const SizedBox(height: defaultPadding / 2),
+          const SizedBox(height: 16 / 2),
           const PriceRangeAndFoodtype(
             foodType: ["Chinese", "American", "Deshi food"],
           ),
-          const SizedBox(height: defaultPadding / 2),
+          const SizedBox(height: 16 / 2),
           const RatingWithCounter(rating: 4.3, numOfRating: 200),
-          const SizedBox(height: defaultPadding),
+          const SizedBox(height: 16),
           Row(
             children: [
               const DeliveryInfo(
@@ -35,7 +35,7 @@ class RestaurantInfo extends StatelessWidget {
                 text: "Free",
                 subText: "Delivery",
               ),
-              const SizedBox(width: defaultPadding),
+              const SizedBox(width: 16),
               const DeliveryInfo(
                 iconSrc: "assets/icons/clock.svg",
                 text: "25",

@@ -11,7 +11,6 @@ class Items extends StatefulWidget {
 }
 
 class _ItemsState extends State<Items> {
-  
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -21,7 +20,7 @@ class _ItemsState extends State<Items> {
           length: demoTabs.length,
           child: TabBar(
             isScrollable: true,
-            unselectedLabelColor: titleColor,
+            unselectedLabelColor: Color(0xFF010F07),
             labelStyle: Theme.of(context).textTheme.titleLarge,
             onTap: (value) {
               // you will get selected tab index
@@ -29,12 +28,12 @@ class _ItemsState extends State<Items> {
             tabs: demoTabs,
           ),
         ),
-        // SizedBox(height: defaultPadding),
+        // SizedBox(height: 16),
         ...List.generate(
           demoData.length,
           (index) => Padding(
-            padding: const EdgeInsets.symmetric(
-                horizontal: defaultPadding, vertical: defaultPadding / 2),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 16, vertical: 16 / 2),
             child: ItemCard(
               title: demoData[index]["title"],
               description: demoData[index]["description"],

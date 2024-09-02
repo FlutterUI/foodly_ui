@@ -116,7 +116,7 @@ class _OtpFormState extends State<OtpForm> {
               ),
             ],
           ),
-          const SizedBox(height: defaultPadding * 2),
+          const SizedBox(height: 16 * 2),
           // Continue Button
           PrimaryButton(
             text: "Continue",

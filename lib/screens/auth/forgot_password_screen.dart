@@ -14,7 +14,7 @@ class ForgotPasswordScreen extends StatelessWidget {
         title: const Text("Forgot Password"),
       ),
       body: const SingleChildScrollView(
-        padding: EdgeInsets.symmetric(horizontal: defaultPadding),
+        padding: EdgeInsets.symmetric(horizontal: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -22,7 +22,7 @@ class ForgotPasswordScreen extends StatelessWidget {
                 title: "Forgot password",
                 text:
                     "Enter your email address and we will \nsend you a reset instructions."),
-            SizedBox(height: defaultPadding),
+            SizedBox(height: 16),
             ForgotPassForm(),
           ],
         ),
@@ -54,7 +54,7 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
             keyboardType: TextInputType.emailAddress,
             decoration: const InputDecoration(hintText: "Email Address"),
           ),
-          const SizedBox(height: defaultPadding),
+          const SizedBox(height: 16),
 
           // Reset password Button
           ElevatedButton(

@@ -11,7 +11,6 @@ class PromotionBanner extends StatefulWidget {
 }
 
 class _PromotionBannerState extends State<PromotionBanner> {
-  
   bool isLoading = true;
   @override
   void initState() {
@@ -26,7 +25,7 @@ class _PromotionBannerState extends State<PromotionBanner> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: isLoading
           ? const AspectRatio(
               aspectRatio: 1.97,

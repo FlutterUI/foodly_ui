@@ -19,11 +19,11 @@ class PriceRow extends StatelessWidget {
       children: [
         Text(
           text,
-          style: const TextStyle(color: titleColor),
+          style: const TextStyle(color: Color(0xFF010F07)),
         ),
         Text(
           "\$$price",
-          style: const TextStyle(color: titleColor),
+          style: const TextStyle(color: Color(0xFF010F07)),
         )
       ],
     );

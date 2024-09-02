@@ -22,7 +22,7 @@ class _DietariesState extends State<Dietaries> {
           press: () {},
           isMainSection: false,
         ),
-        const SizedBox(height: defaultPadding),
+        const SizedBox(height: 16),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Wrap(
@@ -33,7 +33,8 @@ class _DietariesState extends State<Dietaries> {
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(56, 40),
-                  backgroundColor: index == 1 ? primaryColor : bodyTextColor,
+                  backgroundColor:
+                      index == 1 ? primaryColor : Color(0xFF868686),
                 ),
                 child: Text(demoDietaries[index]["title"]),
               ),

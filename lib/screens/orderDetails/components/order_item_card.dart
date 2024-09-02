@@ -22,7 +22,7 @@ class OrderedItemCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             NumOfItems(numOfItem: numOfItem),
-            const SizedBox(width: defaultPadding * 0.75),
+            const SizedBox(width: 16 * 0.75),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,7 +31,7 @@ class OrderedItemCard extends StatelessWidget {
                     title!,
                     style: Theme.of(context).textTheme.titleMedium,
                   ),
-                  const SizedBox(height: defaultPadding / 4),
+                  const SizedBox(height: 16 / 4),
                   Text(
                     description!,
                     style: Theme.of(context).textTheme.bodyMedium,
@@ -41,7 +41,7 @@ class OrderedItemCard extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(width: defaultPadding / 2),
+            const SizedBox(width: 16 / 2),
             Text(
               "USD$price",
               style: Theme.of(context)
@@ -51,7 +51,7 @@ class OrderedItemCard extends StatelessWidget {
             )
           ],
         ),
-        const SizedBox(height: defaultPadding / 2),
+        const SizedBox(height: 16 / 2),
         const Divider(),
       ],
     );

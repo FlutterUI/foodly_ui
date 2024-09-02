@@ -29,7 +29,7 @@ class _SignInFormState extends State<SignInForm> {
             keyboardType: TextInputType.emailAddress,
             decoration: const InputDecoration(hintText: "Email Address"),
           ),
-          const SizedBox(height: defaultPadding),
+          const SizedBox(height: 16),
 
           // Password Field
           TextFormField(
@@ -45,12 +45,12 @@ class _SignInFormState extends State<SignInForm> {
                   });
                 },
                 child: _obscureText
-                    ? const Icon(Icons.visibility_off, color: bodyTextColor)
-                    : const Icon(Icons.visibility, color: bodyTextColor),
+                    ? const Icon(Icons.visibility_off, color: Color(0xFF868686))
+                    : const Icon(Icons.visibility, color: Color(0xFF868686)),
               ),
             ),
           ),
-          const SizedBox(height: defaultPadding),
+          const SizedBox(height: 16),
 
           // Forget Password
           GestureDetector(
@@ -68,7 +68,7 @@ class _SignInFormState extends State<SignInForm> {
                   .copyWith(fontWeight: FontWeight.w500),
             ),
           ),
-          const SizedBox(height: defaultPadding),
+          const SizedBox(height: 16),
 
           // Sign In Button
           ElevatedButton(

@@ -20,7 +20,7 @@ class SignInScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -30,9 +30,9 @@ class SignInScreen extends StatelessWidget {
                     "Enter your Phone number or Email \naddress for sign in. Enjoy your food :)",
               ),
               const SignInForm(),
-              const SizedBox(height: defaultPadding),
+              const SizedBox(height: 16),
               kOrText,
-              const SizedBox(height: defaultPadding * 1.5),
+              const SizedBox(height: 16 * 1.5),
 
               Center(
                 child: Text.rich(
@@ -58,7 +58,7 @@ class SignInScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: defaultPadding),
+              const SizedBox(height: 16),
 
               // Facebook
               SocalButton(
@@ -73,7 +73,7 @@ class SignInScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: defaultPadding),
+              const SizedBox(height: 16),
 
               // Google
               SocalButton(
@@ -84,7 +84,7 @@ class SignInScreen extends StatelessWidget {
                   'assets/icons/google.svg',
                 ),
               ),
-              const SizedBox(height: defaultPadding),
+              const SizedBox(height: 16),
             ],
           ),
         ),

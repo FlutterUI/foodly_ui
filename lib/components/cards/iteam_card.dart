@@ -23,7 +23,7 @@ class ItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextStyle textStyle = Theme.of(context).textTheme.labelLarge!.copyWith(
-          color: titleColor.withOpacity(0.64),
+          color: Color(0xFF010F07).withOpacity(0.64),
           fontWeight: FontWeight.normal,
         );
     return InkWell(
@@ -45,7 +45,7 @@ class ItemCard extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(width: defaultPadding),
+              const SizedBox(width: 16),
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -72,8 +72,7 @@ class ItemCard extends StatelessWidget {
                           style: textStyle,
                         ),
                         const Padding(
-                          padding: EdgeInsets.symmetric(
-                              horizontal: defaultPadding / 2),
+                          padding: EdgeInsets.symmetric(horizontal: 16 / 2),
                           child: SmallDot(),
                         ),
                         Text(foodType!, style: textStyle),

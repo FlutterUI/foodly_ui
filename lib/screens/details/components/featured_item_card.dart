@@ -19,7 +19,7 @@ class FeaturedItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextStyle textStyle = Theme.of(context).textTheme.labelLarge!.copyWith(
-          color: titleColor.withOpacity(0.64),
+          color: Color(0xFF010F07).withOpacity(0.64),
           fontWeight: FontWeight.normal,
         );
     return InkWell(
@@ -45,10 +45,8 @@ class FeaturedItemCard extends StatelessWidget {
               const SizedBox(height: 8),
               Text(
                 title,
-                style: Theme.of(context)
-                    .textTheme
-                    .bodyMedium
-                    ?.copyWith(color: titleColor, fontWeight: FontWeight.w500),
+                style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                    color: Color(0xFF010F07), fontWeight: FontWeight.w500),
               ),
               const SizedBox(height: 8),
               Row(
@@ -58,8 +56,7 @@ class FeaturedItemCard extends StatelessWidget {
                     style: textStyle,
                   ),
                   const Padding(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: defaultPadding / 2),
+                    padding: EdgeInsets.symmetric(horizontal: 16 / 2),
                     child: SmallDot(),
                   ),
                   Text(foodType, style: textStyle)

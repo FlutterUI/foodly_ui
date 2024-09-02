@@ -21,18 +21,19 @@ class _CategoriesState extends State<Categories> {
           press: () {},
           isMainSection: false,
         ),
-        const SizedBox(height: defaultPadding),
+        const SizedBox(height: 16),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Wrap(
-            spacing: defaultPadding / 2,
+            spacing: 16 / 2,
             children: List.generate(
               demoCategories.length,
               (index) => ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(56, 40),
-                  backgroundColor: index == 2 ? primaryColor : bodyTextColor,
+                  backgroundColor:
+                      index == 2 ? primaryColor : Color(0xFF868686),
                 ),
                 child: Text(demoCategories[index]["title"]),
               ),

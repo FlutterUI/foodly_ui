@@ -49,7 +49,7 @@ class _EntryPointState extends State<EntryPoint> {
         },
         currentIndex: _selectedIndex,
         activeColor: primaryColor,
-        inactiveColor: bodyTextColor,
+        inactiveColor: Color(0xFF868686),
         items: List.generate(
           _navitems.length,
           (index) => BottomNavigationBarItem(
@@ -58,7 +58,7 @@ class _EntryPointState extends State<EntryPoint> {
               height: 30,
               width: 30,
               colorFilter: ColorFilter.mode(
-                  index == _selectedIndex ? primaryColor : bodyTextColor,
+                  index == _selectedIndex ? primaryColor : Color(0xFF868686),
                   BlendMode.srcIn),
             ),
             label: _navitems[index]["title"],

@@ -17,16 +17,15 @@ class OrderDetailsScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
-              const SizedBox(height: defaultPadding),
+              const SizedBox(height: 16),
               // List of cart items
               ...List.generate(
                 demoItems.length,
                 (index) => Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: defaultPadding / 2),
+                  padding: const EdgeInsets.symmetric(vertical: 16 / 2),
                   child: OrderedItemCard(
                     title: demoItems[index]["title"],
                     description:
@@ -37,11 +36,11 @@ class OrderDetailsScreen extends StatelessWidget {
                 ),
               ),
               const PriceRow(text: "Subtotal", price: 28.0),
-              const SizedBox(height: defaultPadding / 2),
+              const SizedBox(height: 16 / 2),
               const PriceRow(text: "Delivery", price: 0),
-              const SizedBox(height: defaultPadding / 2),
+              const SizedBox(height: 16 / 2),
               const TotalPrice(price: 20),
-              const SizedBox(height: defaultPadding * 2),
+              const SizedBox(height: 16 * 2),
               PrimaryButton(
                 text: "Checkout (\$20.10)",
                 press: () {},

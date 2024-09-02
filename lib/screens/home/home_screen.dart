@@ -56,12 +56,12 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const SizedBox(height: defaultPadding),
+              const SizedBox(height: 16),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: BigCardImageSlide(images: demoBigImages),
               ),
-              const SizedBox(height: defaultPadding * 2),
+              const SizedBox(height: 16 * 2),
               SectionTitle(
                 title: "Featured Partners",
                 press: () => Navigator.push(
@@ -71,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: defaultPadding),
+              const SizedBox(height: 16),
               const MediumCardList(),
               const SizedBox(height: 20),
               // Banner
@@ -97,8 +97,7 @@ class HomeScreen extends StatelessWidget {
                 // For demo we use 4 items
                 3,
                 (index) => Padding(
-                  padding: const EdgeInsets.fromLTRB(
-                      defaultPadding, 0, defaultPadding, defaultPadding),
+                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                   child: RestaurantInfoBigCard(
                     // Images are List<String>
                     images: demoBigImages..shuffle(),

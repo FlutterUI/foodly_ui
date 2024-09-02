@@ -18,7 +18,8 @@ class TotalPrice extends StatelessWidget {
         const Text.rich(
           TextSpan(
             text: "Total ",
-            style: TextStyle(color: titleColor, fontWeight: FontWeight.w500),
+            style: TextStyle(
+                color: Color(0xFF010F07), fontWeight: FontWeight.w500),
             children: [
               TextSpan(
                 text: "(incl. VAT)",
@@ -29,8 +30,8 @@ class TotalPrice extends StatelessWidget {
         ),
         Text(
           "\$$price",
-          style:
-              const TextStyle(color: titleColor, fontWeight: FontWeight.w500),
+          style: const TextStyle(
+              color: Color(0xFF010F07), fontWeight: FontWeight.w500),
         ),
       ],
     );

@@ -49,14 +49,14 @@ class _AddToOrderScrreenState extends State<AddToOrderScrreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Info(),
-              const SizedBox(height: defaultPadding),
+              const SizedBox(height: 16),
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+                padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const RequiredSectionTitle(title: "Choice of top Cookie"),
-                    const SizedBox(height: defaultPadding),
+                    const SizedBox(height: 16),
                     ...List.generate(
                       choiceOfTopCookies.length,
                       (index) => RoundedCheckboxListTile(
@@ -69,10 +69,10 @@ class _AddToOrderScrreenState extends State<AddToOrderScrreen> {
                         },
                       ),
                     ),
-                    const SizedBox(height: defaultPadding),
+                    const SizedBox(height: 16),
                     const RequiredSectionTitle(
                         title: "Choice of Bottom Cookie"),
-                    const SizedBox(height: defaultPadding),
+                    const SizedBox(height: 16),
                     ...List.generate(
                       choiceOfTopCookies.length,
                       (index) => RoundedCheckboxListTile(
@@ -85,7 +85,7 @@ class _AddToOrderScrreenState extends State<AddToOrderScrreen> {
                         },
                       ),
                     ),
-                    const SizedBox(height: defaultPadding),
+                    const SizedBox(height: 16),
                     // // Num of item
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -103,8 +103,7 @@ class _AddToOrderScrreenState extends State<AddToOrderScrreen> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: defaultPadding),
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
                           child: Text(numOfItems.toString().padLeft(2, "0"),
                               style: Theme.of(context).textTheme.titleLarge),
                         ),
@@ -122,7 +121,7 @@ class _AddToOrderScrreenState extends State<AddToOrderScrreen> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: defaultPadding),
+                    const SizedBox(height: 16),
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
@@ -137,7 +136,7 @@ class _AddToOrderScrreenState extends State<AddToOrderScrreen> {
                   ],
                 ),
               ),
-              const SizedBox(height: defaultPadding)
+              const SizedBox(height: 16)
             ],
           ),
         ),

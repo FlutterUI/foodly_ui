@@ -27,7 +27,7 @@ class FindRestaurantsScreen extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -62,7 +62,7 @@ class FindRestaurantsScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              const SizedBox(height: defaultPadding),
+              const SizedBox(height: 16),
 
               // New Address Form
               Form(
@@ -73,7 +73,7 @@ class FindRestaurantsScreen extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .bodyMedium!
-                          .copyWith(color: titleColor),
+                          .copyWith(color: Color(0xFF010F07)),
                       cursorColor: primaryColor,
                       decoration: InputDecoration(
                         prefixIcon: Padding(
@@ -81,14 +81,14 @@ class FindRestaurantsScreen extends StatelessWidget {
                           child: SvgPicture.asset(
                             "assets/icons/marker.svg",
                             colorFilter: const ColorFilter.mode(
-                                bodyTextColor, BlendMode.srcIn),
+                                Color(0xFF868686), BlendMode.srcIn),
                           ),
                         ),
                         hintText: "Enter a new address",
                         contentPadding: kTextFieldPadding,
                       ),
                     ),
-                    const SizedBox(height: defaultPadding),
+                    const SizedBox(height: 16),
                     ElevatedButton(
                       onPressed: () {
                         // Use your onw way how you combine both New Address and Current Location
@@ -105,7 +105,7 @@ class FindRestaurantsScreen extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: defaultPadding),
+              const SizedBox(height: 16),
             ],
           ),
         ),

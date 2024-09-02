@@ -14,11 +14,11 @@ class FeaturedItems extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
+          padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Text("Featured Items",
               style: Theme.of(context).textTheme.titleLarge),
         ),
-        const SizedBox(height: defaultPadding / 2),
+        const SizedBox(height: 16 / 2),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
@@ -26,7 +26,7 @@ class FeaturedItems extends StatelessWidget {
               ...List.generate(
                 3, // for demo we use 3
                 (index) => Padding(
-                  padding: const EdgeInsets.only(left: defaultPadding),
+                  padding: const EdgeInsets.only(left: 16),
                   child: FeaturedItemCard(
                     title: "Cookie Sandwich",
                     image: "assets/images/featured _items_${index + 1}.png",
@@ -36,7 +36,7 @@ class FeaturedItems extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(width: defaultPadding),
+              const SizedBox(width: 16),
             ],
           ),
         ),

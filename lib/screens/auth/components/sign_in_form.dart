@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../findRestaurants/find_restaurants_screen.dart';
-
-import '../../../constants.dart';
-import '../forgot_password_screen.dart';
 
 class SignInForm extends StatefulWidget {
   const SignInForm({super.key});
@@ -23,7 +19,6 @@ class _SignInFormState extends State<SignInForm> {
       child: Column(
         children: [
           TextFormField(
-            validator: emailValidator.call,
             onSaved: (value) {},
             textInputAction: TextInputAction.next,
             keyboardType: TextInputType.emailAddress,
@@ -34,7 +29,6 @@ class _SignInFormState extends State<SignInForm> {
           // Password Field
           TextFormField(
             obscureText: _obscureText,
-            validator: passwordValidator.call,
             onSaved: (value) {},
             decoration: InputDecoration(
               hintText: "Password",
@@ -54,12 +48,7 @@ class _SignInFormState extends State<SignInForm> {
 
           // Forget Password
           GestureDetector(
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const ForgotPasswordScreen(),
-              ),
-            ),
+            onTap: () {},
             child: Text(
               "Forget Password?",
               style: Theme.of(context)
@@ -75,15 +64,6 @@ class _SignInFormState extends State<SignInForm> {
             onPressed: () {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
-
-                // just for demo
-                Navigator.pushAndRemoveUntil(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const FindRestaurantsScreen(),
-                  ),
-                  (_) => true,
-                );
               }
             },
             child: const Text("Sign in"),

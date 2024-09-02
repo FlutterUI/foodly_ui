@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../constants.dart';
 
 class WelcomeText extends StatelessWidget {
   final String title, text;

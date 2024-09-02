@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:foodly_ui/screens/auth/sign_in_screen.dart';
 import 'constants.dart';
 import 'screens/onboarding/onboarding_scrreen.dart';
 
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
       //     hintStyle: TextStyle(color: Color(0xFF868686)),
       //   ),
       // ),
-      home: const OnboardingScreen(),
+      home: const SignInScreen(),
     );
   }
 }

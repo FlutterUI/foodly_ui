@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
-
 class DotIndicator extends StatelessWidget {
   const DotIndicator({
     super.key,
     this.isActive = false,
-    this.activeColor = primaryColor,
+    this.activeColor = const Color(0xFF22A45D),
     this.inActiveColor = const Color(0xFF868686),
   });
 

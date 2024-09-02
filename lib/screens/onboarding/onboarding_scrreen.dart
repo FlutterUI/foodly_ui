@@ -1,9 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../constants.dart';
-
-import '../../components/dot_indicators.dart';
-import '../auth/sign_in_screen.dart';
-import 'components/onboard_content.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -17,6 +12,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: [
@@ -49,14 +45,15 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16),
               child: ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const SignInScreen(),
-                    ),
-                  );
-                },
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF22A45D),
+                  foregroundColor: Colors.white,
+                  minimumSize: const Size(double.infinity, 40),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
                 child: Text("Get Started".toUpperCase()),
               ),
             ),
@@ -68,22 +65,90 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   }
 }
 
+class OnboardContent extends StatelessWidget {
+  const OnboardContent({
+    super.key,
+    required this.illustration,
+    required this.title,
+    required this.text,
+  });
+
+  final String? illustration, title, text;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Expanded(
+          child: AspectRatio(
+            aspectRatio: 1,
+            child: Image.network(
+              illustration!,
+              fit: BoxFit.contain,
+            ),
+          ),
+        ),
+        const SizedBox(height: 16),
+        Text(
+          title!,
+          style: Theme.of(context)
+              .textTheme
+              .titleLarge!
+              .copyWith(fontWeight: FontWeight.bold),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          text!,
+          style: Theme.of(context).textTheme.bodyMedium,
+          textAlign: TextAlign.center,
+        ),
+      ],
+    );
+  }
+}
+
+class DotIndicator extends StatelessWidget {
+  const DotIndicator({
+    super.key,
+    this.isActive = false,
+    this.activeColor = const Color(0xFF22A45D),
+    this.inActiveColor = const Color(0xFF868686),
+  });
+
+  final bool isActive;
+  final Color activeColor, inActiveColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 250),
+      margin: const EdgeInsets.symmetric(horizontal: 16 / 2),
+      height: 5,
+      width: 8,
+      decoration: BoxDecoration(
+        color: isActive ? activeColor : inActiveColor.withOpacity(0.25),
+        borderRadius: const BorderRadius.all(Radius.circular(20)),
+      ),
+    );
+  }
+}
+
 // Demo data for our Onboarding screen
 List<Map<String, dynamic>> demoData = [
   {
-    "illustration": "assets/Illustrations/Illustrations_1.svg",
+    "illustration": "https://i.postimg.cc/L43CKddq/Illustrations.png",
     "title": "All your favorites",
     "text":
         "Order from the best local restaurants \nwith easy, on-demand delivery.",
   },
   {
-    "illustration": "assets/Illustrations/Illustrations_2.svg",
+    "illustration": "https://i.postimg.cc/xTjs9sY6/Illustrations-1.png",
     "title": "Free delivery offers",
     "text":
         "Free delivery for new customers via Apple Pay\nand others payment methods.",
   },
   {
-    "illustration": "assets/Illustrations/Illustrations_3.svg",
+    "illustration": "https://i.postimg.cc/6qcYdZVV/Illustrations-2.png",
     "title": "Choose your food",
     "text":
         "Easily find your type of food craving and\nyou’ll get delivery in wide range.",

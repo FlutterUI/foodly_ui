@@ -11,7 +11,7 @@ class SignInScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        leading: const SizedBox(),
+        backgroundColor: Colors.white,
         title: const Text("Sign In"),
       ),
       body: SingleChildScrollView(
@@ -136,7 +136,15 @@ class _SignInFormState extends State<SignInForm> {
             onSaved: (value) {},
             textInputAction: TextInputAction.next,
             keyboardType: TextInputType.emailAddress,
-            decoration: const InputDecoration(hintText: "Email Address"),
+            decoration: const InputDecoration(
+              hintText: "Email Address",
+              border: UnderlineInputBorder(
+                borderSide: BorderSide(color: Color(0xFFF3F2F2)),
+              ),
+              enabledBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: Color(0xFFF3F2F2)),
+              ),
+            ),
           ),
           const SizedBox(height: 16),
 
@@ -146,6 +154,12 @@ class _SignInFormState extends State<SignInForm> {
             onSaved: (value) {},
             decoration: InputDecoration(
               hintText: "Password",
+              border: UnderlineInputBorder(
+                borderSide: BorderSide(color: Color(0xFFF3F2F2)),
+              ),
+              enabledBorder: UnderlineInputBorder(
+                borderSide: BorderSide(color: Color(0xFFF3F2F2)),
+              ),
               suffixIcon: GestureDetector(
                 onTap: () {
                   setState(() {

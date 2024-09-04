@@ -4,7 +4,7 @@ import 'constants.dart';
 
 ThemeData buildThemeData() {
   return ThemeData(
-    Color(0xFF22A45D): Color(0xFF22A45D),
+    primaryColor: Color(0xFF22A45D),
 
     scaffoldBackgroundColor: Colors.white,
     fontFamily: "SF Pro Text",

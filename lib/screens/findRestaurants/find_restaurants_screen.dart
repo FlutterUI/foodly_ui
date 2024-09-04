@@ -47,7 +47,7 @@ class FindRestaurantsScreen extends StatelessWidget {
                       "assets/icons/location.svg",
                       height: 24,
                       colorFilter: const ColorFilter.mode(
-                        primaryColor,
+                        Color(0xFF22A45D),
                         BlendMode.srcIn,
                       ),
                     ),
@@ -57,7 +57,7 @@ class FindRestaurantsScreen extends StatelessWidget {
                       style: Theme.of(context)
                           .textTheme
                           .bodyMedium!
-                          .copyWith(color: primaryColor),
+                          .copyWith(color: Color(0xFF22A45D)),
                     )
                   ],
                 ),
@@ -74,7 +74,7 @@ class FindRestaurantsScreen extends StatelessWidget {
                           .textTheme
                           .bodyMedium!
                           .copyWith(color: Color(0xFF010F07)),
-                      cursorColor: primaryColor,
+                      cursorColor: Color(0xFF22A45D),
                       decoration: InputDecoration(
                         prefixIcon: Padding(
                           padding: const EdgeInsets.all(8.0),

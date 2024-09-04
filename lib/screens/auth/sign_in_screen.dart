@@ -107,8 +107,8 @@ class WelcomeText extends StatelessWidget {
               .copyWith(fontWeight: FontWeight.w600),
         ),
         const SizedBox(height: 16 / 2),
-        Text(text, style: Theme.of(context).textTheme.bodyMedium),
-        const SizedBox(height: 16),
+        Text(text, style: TextStyle(color: Color(0xFF868686))),
+        const SizedBox(height: 24),
       ],
     );
   }

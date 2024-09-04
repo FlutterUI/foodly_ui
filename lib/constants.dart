@@ -60,4 +60,5 @@ final phoneNumberValidator = MinLengthValidator(10,
 
 // Common Text
 final Center kOrText = Center(
-    child: Text("Or", style: TextStyle(color: titleColor.withOpacity(0.7))));
+    child: Text("Or",
+        style: TextStyle(color: Color(0xFF010F07).withOpacity(0.7))));

@@ -39,7 +39,7 @@ class NumberVerifyScreen extends StatelessWidget {
                     children: <TextSpan>[
                       TextSpan(
                         text: "Resend Again.",
-                        style: const TextStyle(color: primaryColor),
+                        style: const TextStyle(color: Color(0xFF22A45D)),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
                             // Your OTP PIN resend code

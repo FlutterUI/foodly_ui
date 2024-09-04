@@ -82,7 +82,7 @@ class ItemCard extends StatelessWidget {
                           style: Theme.of(context)
                               .textTheme
                               .labelLarge!
-                              .copyWith(color: primaryColor),
+                              .copyWith(color: Color(0xFF22A45D)),
                         )
                       ],
                     ),

@@ -48,7 +48,7 @@ class _EntryPointState extends State<EntryPoint> {
           });
         },
         currentIndex: _selectedIndex,
-        activeColor: primaryColor,
+        activeColor: Color(0xFF22A45D),
         inactiveColor: Color(0xFF868686),
         items: List.generate(
           _navitems.length,
@@ -58,7 +58,9 @@ class _EntryPointState extends State<EntryPoint> {
               height: 30,
               width: 30,
               colorFilter: ColorFilter.mode(
-                  index == _selectedIndex ? primaryColor : Color(0xFF868686),
+                  index == _selectedIndex
+                      ? Color(0xFF22A45D)
+                      : Color(0xFF868686),
                   BlendMode.srcIn),
             ),
             label: _navitems[index]["title"],

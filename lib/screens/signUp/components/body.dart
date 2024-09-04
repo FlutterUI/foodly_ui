@@ -41,7 +41,7 @@
 //                     children: <TextSpan>[
 //                       TextSpan(
 //                         text: "Sign In",
-//                         style: const TextStyle(color: primaryColor),
+//                         style: const TextStyle(color: Color(0xFF22A45D)),
 //                         recognizer: TapGestureRecognizer()
 //                           ..onTap = () => Navigator.push(
 //                                 context,

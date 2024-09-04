@@ -26,7 +26,7 @@ class HomeScreen extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .bodySmall!
-                  .copyWith(color: primaryColor),
+                  .copyWith(color: Color(0xFF22A45D)),
             ),
             const Text(
               "San Francisco",

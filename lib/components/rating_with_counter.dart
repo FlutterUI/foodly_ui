@@ -30,7 +30,7 @@ class RatingWithCounter extends StatelessWidget {
           height: 20,
           width: 20,
           colorFilter: const ColorFilter.mode(
-            primaryColor,
+            Color(0xFF22A45D),
             BlendMode.srcIn,
           ),
         ),

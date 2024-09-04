@@ -47,7 +47,7 @@ class OrderedItemCard extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .labelSmall!
-                  .copyWith(color: primaryColor),
+                  .copyWith(color: Color(0xFF22A45D)),
             )
           ],
         ),
@@ -82,7 +82,7 @@ class NumOfItems extends StatelessWidget {
         style: Theme.of(context)
             .textTheme
             .labelLarge!
-            .copyWith(color: primaryColor),
+            .copyWith(color: Color(0xFF22A45D)),
       ),
     );
   }

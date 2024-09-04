@@ -34,7 +34,7 @@ class _DietariesState extends State<Dietaries> {
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(56, 40),
                   backgroundColor:
-                      index == 1 ? primaryColor : Color(0xFF868686),
+                      index == 1 ? Color(0xFF22A45D) : Color(0xFF868686),
                 ),
                 child: Text(demoDietaries[index]["title"]),
               ),

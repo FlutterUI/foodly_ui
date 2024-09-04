@@ -22,7 +22,7 @@ class SeconderyButton extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(8)),
-            side: BorderSide(color: primaryColor, width: 0.8),
+            side: BorderSide(color: Color(0xFF22A45D), width: 0.8),
           ),
         ),
         child: child,

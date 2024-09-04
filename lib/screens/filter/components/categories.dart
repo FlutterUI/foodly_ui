@@ -33,7 +33,7 @@ class _CategoriesState extends State<Categories> {
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(56, 40),
                   backgroundColor:
-                      index == 2 ? primaryColor : Color(0xFF868686),
+                      index == 2 ? Color(0xFF22A45D) : Color(0xFF868686),
                 ),
                 child: Text(demoCategories[index]["title"]),
               ),

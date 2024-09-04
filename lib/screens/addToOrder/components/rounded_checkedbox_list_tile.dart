@@ -61,14 +61,14 @@ class CircleCheckBox extends StatelessWidget {
         shape: BoxShape.circle,
         border: Border.all(
           color: isActive
-              ? primaryColor.withOpacity(0.54)
+              ? Color(0xFF22A45D).withOpacity(0.54)
               : const Color(0xFF868686).withOpacity(0.54),
           width: 0.8,
         ),
       ),
       child: const DecoratedBox(
         decoration: BoxDecoration(
-          color: primaryColor,
+          color: Color(0xFF22A45D),
           shape: BoxShape.circle,
         ),
       ),
